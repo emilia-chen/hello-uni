@@ -3,13 +3,13 @@
 		<page-head title="view"></page-head>
 		<view class="uni-padding-wrap uni-common-mt">
 			<view class="uni-hello-text">
-				Flex是Flexible Box的缩写，意为“弹性布局”，用来为盒状模型提供最大的灵活性。当设置display: flex后，继续给view等容器组件设置flex-direction:
+				 {{a()}}Flex {{c}}是Flexible Box的缩写，意为“弹性布局”，用来为盒状模型提供最大的灵活性。当设置display: flex后，继续给view等容器组件设置flex-direction:
 				row或column，就可以在该容器内按行或列排布子组件。uni-app推荐使用flex布局。因为flex布局有利于跨更多平台，尤其是采用原生渲染的平台。
 			</view>
-
+   
 			<view class="uni-title uni-common-mt">
 				flex-direction: row
-				<text>\n横向布局</text>
+				<text @click="b">\n横向布局</text>
 			</view>
 			<view class="uni-flex uni-row">
 				<view class="flex-item uni-bg-red">A</view>
@@ -105,7 +105,19 @@
 <script>
 	export default {
 		data() {
-			return {}
+			return {
+				c:3
+			}
+		},
+		methods:{
+			a(){
+				console.log(1)
+				return 1
+			},
+			b(){
+			console.log(2)
+			 this.c=4	
+			}
 		}
 	}
 </script>
